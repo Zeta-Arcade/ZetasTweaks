@@ -9,7 +9,6 @@ C:\Users\Zeta\source\repos\ZetasTweaks\ZetasTweaks\bin\Debug\Assembly-CSharp.dll
 C:\Users\Zeta\source\repos\ZetasTweaks\ZetasTweaks\bin\Debug\BepInEx.dll
 C:\Users\Zeta\source\repos\ZetasTweaks\ZetasTweaks\bin\Debug\UnityEngine.CoreModule.dll
 C:\Users\Zeta\source\repos\ZetasTweaks\ZetasTweaks\bin\Debug\UnityEngine.dll
-C:\Users\Zeta\source\repos\ZetasTweaks\ZetasTweaks\bin\Debug\Mono.Cecil.dll
 C:\Users\Zeta\source\repos\ZetasTweaks\ZetasTweaks\bin\Debug\MonoMod.Utils.dll
 C:\Users\Zeta\source\repos\ZetasTweaks\ZetasTweaks\bin\Debug\MonoMod.RuntimeDetour.dll
 C:\Users\Zeta\source\repos\ZetasTweaks\ZetasTweaks\bin\Debug\netstandard.dll
@@ -111,3 +110,4 @@ C:\Users\Zeta\source\repos\ZetasTweaks\ZetasTweaks\bin\Debug\BepInEx.xml
 C:\Users\Zeta\source\repos\ZetasTweaks\ZetasTweaks\bin\Debug\MonoMod.Utils.xml
 C:\Users\Zeta\source\repos\ZetasTweaks\ZetasTweaks\bin\Debug\MonoMod.RuntimeDetour.xml
 C:\Users\Zeta\source\repos\ZetasTweaks\ZetasTweaks\obj\Debug\ZetasTweaks.csproj.CopyComplete
+C:\Users\Zeta\source\repos\ZetasTweaks\ZetasTweaks\bin\Debug\Mono.Cecil.dll
