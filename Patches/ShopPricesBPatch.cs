@@ -15,12 +15,12 @@ namespace ZetasTweaks.Patches
     [HarmonyPatch(typeof(StartOfRound))]
     internal class StartOfRoundBPatch
     {
-        [HarmonyPatch("firstDayAnimation")]
-        [HarmonyPostfix]
-        static void RetrieveUnlockables(ref UnlockablesList ___unlockablesList)
-        {
-            ConfigSettings.SaveUnlockables(___unlockablesList); //Mostly for debugging, saves all the unlockables to a file
-        }
+       // [HarmonyPatch("firstDayAnimation")]
+       // [HarmonyPostfix]
+       // static void RetrieveUnlockables(ref UnlockablesList ___unlockablesList)
+       // {
+       //     //ConfigSettings.SaveUnlockables(___unlockablesList); //Mostly for debugging, saves all the unlockables to a file
+       // }
     }
 
     [HarmonyPatch(typeof(Terminal))]

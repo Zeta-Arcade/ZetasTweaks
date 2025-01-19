@@ -3,6 +3,8 @@ using BepInEx.Configuration;
 using BepInEx.Logging;
 using GameNetcodeStuff;
 using HarmonyLib;
+using LethalLib.Extras;
+using LethalLib.Modules;
 using System;
 using System.Collections.Generic;
 using System.IO;
@@ -23,7 +25,7 @@ namespace ZetasTweaks
     {
         public const string modGUID = "ZetasTweaks";
         public const string modName = "Zetas Tweaks";
-        public const string modVersion = "1.0.3";
+        public const string modVersion = "1.0.4";
     }
     [BepInPlugin(PluginInfo.modGUID, PluginInfo.modName, PluginInfo.modVersion)]
     public class ZetasTweaksBase : BaseUnityPlugin
@@ -70,9 +72,14 @@ namespace ZetasTweaks
             harmony.PatchAll(typeof(StartOfRoundBPatch));
             harmony.PatchAll(typeof(ShopPricesBPatch));
             harmony.PatchAll(typeof(ShipTeleporterPatch));
+
             mls.LogInfo("Zetas Tweaks loaded");
         }
-
+        public static void Init()
+        {
+            
+            
+        }
         public static void Log(string message)
         {
             Instance.PassLog(message, false);
@@ -193,11 +200,11 @@ namespace ZetasTweaks
             TPCooldown = ZetasTweaksBase.Instance.Config.Bind<int>("Misc Settings", "TPCooldown", 10, "How long the cooldown is on the teleporter, in seconds. Default value is 10.");
             ITPCooldown = ZetasTweaksBase.Instance.Config.Bind<int>("Misc Settings", "ITPCooldown", 210, "How long the cooldown is on the inverse teleporter, in seconds. Default value is 210 (3 minutes 30 seconds)");
         }
-        public static ZetasTweaks.Patches.UnlockablesList localUnlockableList;
-        public static void SaveUnlockables(ZetasTweaks.Patches.UnlockablesList unlockRef)
-        {
-            localUnlockableList = unlockRef;
-        }
+        //public static ZetasTweaks.Patches.UnlockablesList localUnlockableList;
+       // public static void SaveUnlockables(ZetasTweaks.Patches.UnlockablesList unlockRef)
+        //{
+       //     localUnlockableList = unlockRef;
+       // }
     }
     [Serializable]
     [HarmonyPatch]
@@ -211,7 +218,7 @@ namespace ZetasTweaks
 
         public static bool isSynced = false;
 
-        public ZetasTweaks.Patches.UnlockablesList localUnlockableList;
+        //public ZetasTweaks.Patches.UnlockablesList localUnlockableList;
 
         public int WalkieTalkieCost = 12;
         public int FlashlightCost = 15;
@@ -303,7 +310,7 @@ namespace ZetasTweaks
                 defaultConfig.LifeIncrementMultiplier = Mathf.Clamp(ConfigSettings.LifeIncrementMultiplier.Value, 0.1f, 9999f);
                 defaultConfig.TPCooldown = Mathf.Clamp(ConfigSettings.TPCooldown.Value, 0, 9999);
                 defaultConfig.ITPCooldown = Mathf.Clamp(ConfigSettings.ITPCooldown.Value, 0, 9999);
-                defaultConfig.localUnlockableList = ConfigSettings.localUnlockableList;
+                //defaultConfig.localUnlockableList = ConfigSettings.localUnlockableList;
                 instance = defaultConfig;
             }
         }
